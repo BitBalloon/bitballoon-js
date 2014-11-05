@@ -328,7 +328,7 @@ exports.Client = Client;
 var process=require("__browserify_process");var model = require("./model");
 
 if (typeof(require) !== 'undefined') {
-  var fs = require("fs");
+  var fs = require("graceful-fs");
 }
 
 var Deploy = model.constructor();
@@ -495,7 +495,7 @@ if (typeof(require) !== 'undefined') {
   var glob   = require("glob"),
       path   = require("path"),
       crypto = require("crypto"),
-      fs     = require("fs");
+      fs     = require("graceful-fs");
 }
 
 var Site = model.constructor();

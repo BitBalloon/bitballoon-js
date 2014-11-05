@@ -1,7 +1,7 @@
 if (typeof(require) !== 'undefined') {
   var bitballoon  = require("../lib/bitballoon.js"),
       crypto      = require("crypto"),
-      fs          = require("fs");
+      fs          = require("graceful-fs");
 }
 
 var Emitter = function() {
@@ -498,7 +498,7 @@ describe("bitballoon", function() {
   // Node specific methods
   if (typeof(window) === "undefined") {
     var crypto = require('crypto'),
-        fs     = require('fs');
+        fs     = require("graceful-fs");
     
     it("should upload a site from a dir", function() {
       var client = bitballoon.createClient({access_token: "1234", http: http}),
